@@ -1,0 +1,237 @@
+{% extends "Base.html" %}
+{% load static %}
+ {% block content %}
+        <!-- Top News Start-->
+        <div class="top-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 tn-left">
+                        <div class="row tn-slider">
+                            {% for title,desc,img,readmore in row %}
+                            <div class="col-md-6">
+                                <div class="tn-img">
+                                    <img src={{img}} style="height:343.63px;width:540px">
+                                    <div class="tn-title">
+                                        {% if user.is_authenticated and not user.is_staff %}
+                                        <a href={{readmore}}><marquee>{{title}}</marquee></a>
+                                        {% else %}
+                                        <a href="/prompt"><marquee>{{title}}</marquee></a>
+                                        {% endif %}
+
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md-6 tn-right">
+                        <div class="row">
+                            {% for title,desc,img,readmore in row1 %}
+                            <div class="col-md-6">
+                                <div class="tn-img">
+                                    <img src="{{img}}" style="height:172.03px;width:270px" class="xyz">
+                                    <div class="tn-title">
+                                        {% if user.is_authenticated and not user.is_staff %}
+                                        <a href={{readmore}} style="font-size: 20px;"><marquee>{{title}}</marquee></a>
+                                        {% else %}
+                                        <a href="/prompt" style="font-size:20px;"><marquee>{{title}}</marquee></a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top News End-->
+
+        <!-- Category News Start-->
+        <div class="cat-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Sports</h2>
+                        <div class="row cn-slider">
+                            {% for title,desc,img,readmore in sports %}
+                            <div class="col-md-6">
+                                <div class="cn-img">
+                                    <img src="{{img}}" style="height:162.46px;width:255px">
+                                    <div class="cn-title">
+                                        {% if user.is_authenticated and not user.is_staff %}
+                                        <a href={{readmore}}><marquee>{{title}}</marquee></a>
+                                        {% else %}
+                                        <a href="/prompt"><marquee>{{title}}</marquee></a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Technology</h2>
+                        <div class="row cn-slider">
+                            {% for title,desc,img,readmore in technology %}
+                            <div class="col-md-6">
+                                <div class="cn-img">
+                                    <img src="{{img}}" style="height:162.46px;width:255px">
+                                    <div class="cn-title">
+                                        {% if user.is_authenticated and not user.is_staff %}
+                                        <a href={{readmore}}><marquee>{{title}}</marquee></a>
+                                        {% else %}
+                                        <a href="/prompt"><marquee>{{title}}</marquee></a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category News End-->
+
+        <!-- Category News Start-->
+        <div class="cat-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Business</h2>
+                        <div class="row cn-slider">
+                            {% for title,desc,img,readmore in business %}
+                            <div class="col-md-6">
+                                <div class="cn-img">
+                                    <img src="{{img}}" style="height:162.46px;width:255px">
+                                    <div class="cn-title">
+                                        {% if user.is_authenticated and not user.is_staff %}
+                                        <a href={{readmore}}><marquee>{{title}}</marquee></a>
+                                        {% else %}
+                                        <a href="/prompt"><marquee>{{title}}</marquee></a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Entertainment</h2>
+                        <div class="row cn-slider">
+                            {% for title,desc,img,readmore in entertainment %}
+                            <div class="col-md-6">
+                                <div class="cn-img">
+                                    <img src="{{img}}" style="height:162.46px;width:255px">
+                                    <div class="cn-title">
+                                        {% if user.is_authenticated and not user.is_staff %}
+                                        <a href={{readmore}}><marquee>{{title}}</marquee></a>
+                                        {% else %}
+                                        <a href="/prompt"><marquee>{{title}}</marquee></a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category News End-->
+        
+                <!-- Category News Start-->
+        <div class="cat-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Health</h2>
+                        <div class="row cn-slider">
+                            {% for title,desc,img,readmore in health %}
+                            <div class="col-md-6">
+                                <div class="cn-img">
+                                    <img src="{{img}}" style="height:162.46px;width:255px">
+                                    <div class="cn-title">
+                                        {% if user.is_authenticated and not user.is_staff %}
+                                        <a href={{readmore}}><marquee>{{title}}</marquee></a>
+                                        {% else %}
+                                        <a href="/prompt"><marquee>{{title}}</marquee></a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Science</h2>
+                        <div class="row cn-slider">
+                            {% for title,desc,img,readmore in science %}
+                            <div class="col-md-6">
+                                <div class="cn-img">
+                                    <img src="{{img}}" style="height:162.46px;width:255px">
+                                    <div class="cn-title">
+                                        {% if user.is_authenticated and not user.is_staff %}
+                                        <a href={{readmore}}><marquee>{{title}}</marquee></a>
+                                        {% else %}
+                                        <a href="/prompt"><marquee>{{title}}</marquee></a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category News End-->
+        <div class="tab-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#featured">Top Headlines</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="featured" class="container tab-pane active">
+                                {% for title,desc,img,readmore in row %}
+                                <div class="tn-news">
+                                    <div class="tn-img">
+                                        <img src={{img}} />
+                                    </div>
+                                    <div class="tn-title">
+                                        {% if user.is_authenticated and not user.is_staff %}
+                                        <a href={{readmore}}>{{title}}</a>
+                                        {% else %}
+                                        <a href="/prompt">{{title}}</a>
+                                        {% endif %}
+                                    </div>
+                                    {% if user.is_authenticated and not user.is_staff %}
+                                    <div style="float: right;">
+                                        <form action="/savebookmark" method="POST">{% csrf_token %}
+                                            <input type="hidden" value={{img}} name="image">
+                                            <input type="hidden" value="{{title}}" name="title">
+                                            <button type="submit" class="btn btn-light" style="color: #ffffff;
+                                            background: #ffffff;
+                                            border: 1px solid #ffffff;margin-left: 300px;">
+                                                <i class="fa fa-bookmark" aria-hidden="true" style="color:black"></i>
+                                            </button>
+                                        </form> 
+                                        </div>
+                                        
+                                     {% endif %}
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    <br>
+{% endblock %}
